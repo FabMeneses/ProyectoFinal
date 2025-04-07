@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BottomNavigation</string>
+    <string name="fab_add">Agregar nuevo elemento</string>
+    <string name="central_action">Acción central</string>
+</resources>
