@@ -75,7 +75,7 @@ fun InputFieldPreview(){
         placeholder = "Enter text",
         leadingIcon = {
             Icon(
-                painter = painterResource(id = R.drawable.ic_bola_amarilla),
+                painter = painterResource(id = R.drawable.huella),
                 contentDescription = null,
                 tint = DarkTextColor,
                 modifier = Modifier.size(24.dp)
