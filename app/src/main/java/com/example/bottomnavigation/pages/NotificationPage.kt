@@ -17,15 +17,15 @@ fun NotificationPage(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(4294279679)),
+            .background(Color(0xFFD1C4E9)), // Fondo morado pastel
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Notification Page",
+            text = "Página de Notificaciones", // Texto en español
             fontSize = 40.sp,
             fontWeight = FontWeight.SemiBold,
-            color = Color.White
+            color = Color(0xFF1C1C1C) // Gris oscuro para el texto
         )
     }
 }

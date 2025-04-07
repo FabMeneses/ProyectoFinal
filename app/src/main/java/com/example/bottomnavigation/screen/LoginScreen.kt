@@ -80,14 +80,15 @@ fun LoginScreen(
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(horizontal = 24.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Bottom // Esto alinea todo hacia la parte inferior
             ) {
                 Spacer(modifier = Modifier.height(40.dp))
 
                 // Logo/Imagen
                 Image(
                     painter = painterResource(id = R.drawable.ic_launcher_foreground),
-                    contentDescription = "App Logo",
+                    contentDescription = "Logo de la app",
                     modifier = Modifier.size(120.dp),
                     contentScale = ContentScale.Fit
                 )
@@ -96,7 +97,7 @@ fun LoginScreen(
 
                 // Título
                 Text(
-                    text = "Welcome Back",
+                    text = "¡Bienvenido Amigo!",
                     style = MaterialTheme.typography.headlineMedium.copy(
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onBackground
@@ -107,7 +108,7 @@ fun LoginScreen(
 
                 // Subtítulo
                 Text(
-                    text = "Login to your account",
+                    text = "Inicia sesión",
                     style = MaterialTheme.typography.bodyLarge.copy(
                         color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
                     )
@@ -132,8 +133,8 @@ fun LoginScreen(
                 ) {
                     // Email Input
                     EmailOutlinedField(
-                        placeholder = "Enter Your Email",
-                        label = "Email",
+                        placeholder = "Pon tu correo",
+                        label = "Correo Electrónico",
                         modifier = Modifier.fillMaxWidth(),
                         placeholderTextStyle = TextStyle(
                             fontSize = 14.sp,
@@ -153,8 +154,8 @@ fun LoginScreen(
 
                     // Password Input
                     PasswordOutlinedField(
-                        placeholder = "Enter Your Password",
-                        label = "Password",
+                        placeholder = "Y tu contraseña",
+                        label = "Contraseña",
                         modifier = Modifier.fillMaxWidth(),
                         placeholderTextStyle = TextStyle(
                             fontSize = 14.sp,
@@ -178,10 +179,9 @@ fun LoginScreen(
                         horizontalArrangement = Arrangement.End
                     ) {
                         LinkText(
-                            text = "Forgot password?",
+                            text = "¿Olvidaste la contraseña? 🙈",
                             route = "welcomeScreen",
                             navController = navController,
-
                         )
                     }
 
@@ -195,14 +195,14 @@ fun LoginScreen(
                                 )
                             )
                         },
-                        text = "Login",
+                        text = "¡Iniciar sesión!",
                         isNavigationArrowVisible = true,
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(50.dp),
                         colors = ButtonDefaults.buttonColors(
                             contentColor = Color.White,
-                            containerColor = Brown
+                            containerColor = MaterialTheme.colorScheme.primary
                         ),
                         cornerRadius = 12.dp
                     )
@@ -234,62 +234,25 @@ fun LoginScreen(
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
-                    Text(
-                        text = "Or login with",
-                        style = MaterialTheme.typography.bodyMedium.copy(
-                            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f)
-                        )
-                    )
-
-                    Row(
-                        horizontalArrangement = Arrangement.spacedBy(16.dp)
-                    ) {
-                        SocialIconButton(
-                            iconResId = R.drawable.ic_apple,
-                            modifier = Modifier.size(48.dp)
-                        )
-                        SocialIconButton(
-                            iconResId = R.drawable.ic_google,
-                            modifier = Modifier.size(48.dp)
-                        )
-                        SocialIconButton(
-                            iconResId = R.drawable.ic_facebook,
-                            modifier = Modifier.size(48.dp)
-                        )
-                    }
                 }
-
-                Spacer(modifier = Modifier.weight(1f))
-
                 // Register Link
                 Row(
                     modifier = Modifier.padding(bottom = 32.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
-                        text = "Don't have an account? ",
+                        text = "¿Aún no tienes cuenta? ",
                         style = MaterialTheme.typography.bodyMedium.copy(
                             color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
                         )
                     )
                     LinkText(
-                        text = "Register",
+                        text = "¡Regístrate ahora!",
                         route = "RegisterScreen",
                         navController = navController,
-
                     )
                 }
             }
         }
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun PreviewLoginScreen() {
-    val navController = rememberNavController()
-    LoginScreen(
-        navController = navController,
-        onLoginSuccess = {}
-    )
 }

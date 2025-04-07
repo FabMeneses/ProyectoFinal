@@ -22,20 +22,18 @@ fun WelcomeScreen(
     //navController: NavHostController,
     onWelcomeSuccess: () -> Unit
 ) {
-    Box (modifier = Modifier
+    Box(modifier = Modifier
         .fillMaxSize()
-        .background(MaterialTheme.colorScheme.background))
-
-
-    {
+        .background(MaterialTheme.colorScheme.background)
+    ) {
         // Contenido principal
         Column(
             modifier = Modifier
                 .fillMaxSize()
-            //.systemBarsPadding(), <-- BARRA DE ESTADO
-            , horizontalAlignment = Alignment.CenterHorizontally
+                .padding(bottom = 32.dp), // Ajuste para espacio en la parte inferior
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Bottom // Esto alinea todo hacia la parte inferior
         ) {
-
             Spacer(modifier = Modifier.height(50.dp))
 
             Image(
@@ -56,15 +54,17 @@ fun WelcomeScreen(
                 modifier = Modifier.padding(horizontal = 24.dp),
                 color = MaterialTheme.colorScheme.onBackground
             )
+
             Spacer(modifier = Modifier.height(24.dp))
 
             Text(
-                text = "Ingenieria en Software 08-03, aplicaciones moviles",
+                text = "Ingeniería en Software 08-03, aplicaciones móviles",
                 textAlign = TextAlign.Center,
                 style = MaterialTheme.typography.titleLarge,
                 color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier.padding(horizontal = 24.dp)
             )
+
             Spacer(modifier = Modifier.height(24.dp))
 
             PrimaryButton(
@@ -83,6 +83,5 @@ fun WelcomeScreen(
                 cornerRadius = 32.dp
             )
         }
-
     }
 }

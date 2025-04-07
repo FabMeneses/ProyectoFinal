@@ -1,4 +1,3 @@
-
 package com.example.bottomnavigation.pages
 
 import androidx.compose.foundation.background
@@ -18,15 +17,15 @@ fun ProfilePage(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(4289199956)),
+            .background(Color(0xFFF8BBD0)), // Fondo rosa pastel
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Profile Page",
+            text = "Página de Perfil", // Texto en español
             fontSize = 40.sp,
             fontWeight = FontWeight.SemiBold,
-            color = Color.White
+            color = Color(0xFF1C1C1C) // Gris oscuro para el texto
         )
     }
 }

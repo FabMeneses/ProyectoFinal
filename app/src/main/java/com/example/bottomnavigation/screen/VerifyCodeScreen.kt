@@ -82,8 +82,8 @@ fun VerifyCodeScreen(
                         .shadow(4.dp, shape = CircleShape)
                 ) {
                     Icon(
-                        painter = painterResource(id = R.drawable.ic_flecha_izq),
-                        contentDescription = "Back",
+                        painter = painterResource(id = R.drawable.flecha),
+                        contentDescription = "Atrás",
                         tint = Color.Black
                     )
                 }
@@ -93,7 +93,7 @@ fun VerifyCodeScreen(
 
             // Encabezado
             Text(
-                text = "Verify Code",
+                text = "Verificar código",
                 style = MaterialTheme.typography.headlineLarge.copy(
                     fontSize = 28.sp,
                     fontWeight = FontWeight.Bold,
@@ -105,7 +105,7 @@ fun VerifyCodeScreen(
             Spacer(modifier = Modifier.height(8.dp))
 
             Text(
-                text = "Please enter the code we just sent to email",
+                text = "Por favor, ingresa el código que acabamos de enviar a tu correo electrónico",
                 style = MaterialTheme.typography.bodyMedium.copy(
                     fontSize = 14.sp,
                     color = MaterialTheme.colorScheme.onBackground
@@ -114,7 +114,7 @@ fun VerifyCodeScreen(
             )
 
             Text(
-                text = "example@gmail.com",
+                text = "ejemplo@gmail.com",
                 style = MaterialTheme.typography.bodyMedium.copy(
                     fontSize = 14.sp,
                     color = MaterialTheme.colorScheme.primary
@@ -159,19 +159,19 @@ fun VerifyCodeScreen(
 
             Spacer(modifier = Modifier.height(48.dp))
 
-            // Enlace "Resend code"
+            // Enlace "Reenviar código"
             Text(
-                text = "Didn't receive OTP?",
+                text = "¿No recibiste el OTP?",
                 color = MaterialTheme.colorScheme.onBackground,
-                modifier = Modifier.clickable { /* Resend Code Logic */ },
+                modifier = Modifier.clickable { /* Lógica para reenviar código */ },
                 fontSize = 14.sp
             )
 
             Text(
-                text = "Resend code",
+                text = "Reenviar código",
                 textDecoration = TextDecoration.Underline,
                 color = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.clickable { /* Resend Code Logic */ },
+                modifier = Modifier.clickable { /* Lógica para reenviar código */ },
                 fontSize = 14.sp
             )
 
@@ -181,7 +181,7 @@ fun VerifyCodeScreen(
                 onClick = {
                     onVerifyCodeSuccess()
                 },
-                text = "Verify",
+                text = "Verificar",
                 isNavigationArrowVisible = true,
                 modifier = Modifier
                     .padding(horizontal = 24.dp)
@@ -192,7 +192,7 @@ fun VerifyCodeScreen(
                     ),
                 colors = ButtonDefaults.buttonColors(
                     contentColor = Color.White, // Color del texto del botón
-                    containerColor = Brown // Color de fondo del botón
+                    containerColor = MaterialTheme.colorScheme.primary // Color de fondo del botón según el tema
                 ),
                 cornerRadius = 32.dp // Bordes redondeados
             )

@@ -18,6 +18,11 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun CustomFloatingActionButton(
@@ -41,21 +46,45 @@ fun CustomFloatingActionButton(
     }
 }
 
-@Preview(showBackground = true)
 @Composable
-fun PreviewCustomFloatingActionButton() {
+fun HomePage(navController: NavController, modifier: Modifier = Modifier) {
     Scaffold(
         floatingActionButton = {
             CustomFloatingActionButton(
-                onClick = { /* Acción de prueba */ },
+                onClick = {
+                    // Aquí navegamos hacia la vista "NuevaVista"
+                    navController.navigate("nuevaVista")
+                },
                 icon = Icons.Default.Add,
-                contentDescription = "Add"
+                contentDescription = "Agregar"
             )
         },
         floatingActionButtonPosition = FabPosition.Center
     ) { paddingValues ->
         Box(modifier = Modifier.fillMaxSize().padding(paddingValues)) {
-            Text("Vista previa del FAB", modifier = Modifier.padding(16.dp))
+            Text("Página de Inicio", modifier = Modifier.padding(16.dp))
         }
     }
+}
+
+@Composable
+fun NuevaVista(modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text = "Esta es la Nueva Vista",
+            fontSize = 24.sp,
+            fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.onBackground
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewHomePage() {
+    val navController = rememberNavController()
+    HomePage(navController = navController)
 }
