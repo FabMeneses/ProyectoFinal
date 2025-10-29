@@ -17,15 +17,15 @@ fun SettingsPage(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(4289199956)),
+            .background(Color(0xFFE3F2FD)), // Fondo azul pastel
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Settings Page",
+            text = "Página de Configuración", // Texto en español
             fontSize = 40.sp,
             fontWeight = FontWeight.SemiBold,
-            color = Color.White
+            color = Color(0xFF1C1C1C) // Gris oscuro para el texto
         )
     }
 }

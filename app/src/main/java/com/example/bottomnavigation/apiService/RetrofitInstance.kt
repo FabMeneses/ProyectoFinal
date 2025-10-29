@@ -6,9 +6,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitInstance {
-    // Asegúrate que termine con /
-    private const val BASE_URL = "http://192.168.1.64:8000/"
-
+    private const val BASE_URL = "http://10.0.30.80:8000/"
+//Cambié la ip cada que se cambia o reinicia la red
     private val client by lazy {
         OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().apply {

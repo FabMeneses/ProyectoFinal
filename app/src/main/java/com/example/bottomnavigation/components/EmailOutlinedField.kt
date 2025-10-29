@@ -40,7 +40,7 @@ fun EmailOutlinedField(
     visualTransformation: VisualTransformation = VisualTransformation.None,
     leadingIcon: @Composable (() -> Unit)? = { // Icono por defecto
         Icon(
-            painter = painterResource(id = R.drawable.ic_bola_amarilla),
+            painter = painterResource(id = R.drawable.huella),
             contentDescription = null,
             tint = MaterialTheme.colorScheme.onBackground,
             modifier = Modifier.size(24.dp)
@@ -97,7 +97,7 @@ fun CustomOutlinedTextFieldPreview(){
         placeholder = "Enter text",
         leadingIcon = {
             Icon(
-                painter = painterResource(id = R.drawable.ic_bola_amarilla),
+                painter = painterResource(id = R.drawable.huella),
                 contentDescription = null,
                 tint = DarkTextColor,
                 modifier = Modifier.size(24.dp)

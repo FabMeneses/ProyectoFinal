@@ -39,7 +39,7 @@ fun PasswordOutlinedField(
     leadingIcon: @Composable (() -> Unit)? = {
         // Icono por defecto
         Icon(
-            painter = painterResource(id = R.drawable.ic_bola_amarilla),
+            painter = painterResource(id = R.drawable.huella),
             contentDescription = null,
             tint = MaterialTheme.colorScheme.onSurface,
             modifier = Modifier.size(24.dp)
@@ -125,7 +125,7 @@ fun PasswordOutlinedFieldPreview() {
         placeholder = "Enter password",
         leadingIcon = {
             Icon(
-                painter = painterResource(id = R.drawable.ic_bola_amarilla),
+                painter = painterResource(id = R.drawable.huella),
                 contentDescription = "Password",
                 tint = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier.size(24.dp)

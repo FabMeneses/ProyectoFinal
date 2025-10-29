@@ -17,15 +17,15 @@ fun HomePage(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(0xFF1976D2)),
+            .background(Color(0xFF81D4FA)), // Fondo azul pastel
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Home Page",
+            text = "Página de Inicio", // Texto en español
             fontSize = 40.sp,
             fontWeight = FontWeight.SemiBold,
-            color = Color.White
+            color = Color(0xFF1C1C1C) // Gris oscuro para el texto
         )
     }
 }
